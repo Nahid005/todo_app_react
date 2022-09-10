@@ -1,0 +1,32 @@
+.todoList{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0;
+    border: 2px solid #e9eafa;
+    padding: 10px;
+    transition: all .3s ease-in;
+    border-radius: 3px;
+    gap: 20px;
+}
+
+.todoList:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.todoList h4 {
+    margin: 0;
+}
+
+.todoList p {
+    margin: 5px 0;
+}
+
+.todoList article{
+    width: 80%;
+}
+
+.todoList .deleteButton {
+    width: 20%;
+    text-align: right;
+}
