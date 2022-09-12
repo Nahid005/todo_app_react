@@ -1,18 +1,19 @@
 import React, {useState} from 'react'
+import {v4 as uuidv4} from 'uuid'
 
 import style from './newTodo.module.css'
 
 function newTodo (props) {
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [newTodo, setNewTodo] = useState({title : '', description: '', id:''})
+    const [newTodo, setNewTodo] = useState({title : '', description: '', id:'',})
 
     const {title, description} = newTodo
 
     const handleTodo = (e) => {
         const name = e.target.name
         setNewTodo((oldTodo) => {
-            return {...oldTodo, [name]: e.target.value}
+            return {...oldTodo, id:uuidv4(), [name]: e.target.value}
         })
     }
 

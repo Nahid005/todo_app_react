@@ -14,12 +14,15 @@ function Home () {
         })
     }
 
-    const id = Math.floor(Math.random()*10)
-    
+    const onRemoveTodo = (removeElement) => {
+        const filterTodo = todos.filter((todo) => todo.id !== removeElement)
+        setTodos(filterTodo)
+    }
+
     return (
         <div className={style.container}>
             <NewTodo onAddNewTodo = {onAddNewTodo}/>
-            <Todos todos={todos} id={id}/>
+            <Todos todos={todos} onRemoveTodo = {onRemoveTodo} />
         </div>
     )
 }
